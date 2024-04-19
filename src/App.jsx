@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./modules/navbar/Navbar";
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Product from "./Pages/Product"; 
 import Cart from "./Pages/Cart"; 
 import Login from "./Pages/Login"; 
@@ -17,7 +17,7 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar/>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Home/>} />
         <Route path="/Electronics" element={<ShopCatogory banner={banner_electronics} category="Electronics"/>}/>
         <Route path="/Interior" element={<ShopCatogory banner={banner_interior} category="Interior"/>}/>
