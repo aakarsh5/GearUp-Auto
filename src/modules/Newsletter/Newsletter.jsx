@@ -4,9 +4,9 @@ import './Newsletter.css';
 function Newsletter() {
   return (
     <div className='newsletter'>
-      <h1>Get Latest Information On Gmail</h1>
+      <h1>Get Updated On Gmail</h1>
       <p>Subscribe To Newsletter</p>
-      <div>
+      <div className='input'>
         <input type="email" placeholder='Your Email Id' />
         <button>Subscribe</button>
       </div>

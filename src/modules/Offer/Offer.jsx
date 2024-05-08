@@ -1,6 +1,6 @@
 import React from 'react'
 import'./Offer.css';
-import offer_img from '../assets/materials/offer_img.png';
+import offer_img from '../assets/materials/offer_img1.jpg';
 
 function Offer() {
   return (
@@ -12,7 +12,7 @@ function Offer() {
             <button>Check Now</button>
         </div>  
         <div className="offer-right">
-            <img src={offer_img} alt="offer image" />
+            {/* <img src={offer_img} alt="offer image" /> */}
         </div>
     </div>
   )

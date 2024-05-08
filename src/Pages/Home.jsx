@@ -9,13 +9,14 @@ import Collection from "../modules/Collection/Collection.jsx";
 function Home() {
   return (
     <div>
-      <Head/>
-      <Flexbox/>
-      <Popular/>
-      <Collection/>
-      <Offer/>
-      <Newsletter/>
-
+      <Head />
+      <Popular />
+      <Flexbox />
+      <Collection />
+      <Offer />
+      <center>
+        <Newsletter />
+      </center>
     </div>
   );
 }

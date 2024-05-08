@@ -1,50 +1,69 @@
-import React, { useState } from 'react';
-import './Flexbox.css';
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+import { ShopContext } from "../Context/ShopContext";
+import CarDisplay from "../CarDisplay/CarDisplay";
 
-function App() {
+function Flexbox() {
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
+  const shopContext = useContext(ShopContext);
 
-  const carData = {
-    "2020": {
-      "Toyota": ["Camry", "Corolla"],
-      "Honda": ["Civic", "Accord"]
-    },
-    "2021": {
-      "Toyota": ["RAV4", "Highlander"],
-      "Honda": ["CR-V", "Pilot"]
+  useEffect(() => {
+    // Fetch years from backend when component mounts
+    console.log("first");
+    shopContext.fetchCompanies(selectedYear);
+  }, [selectedYear, shopContext]);
+
+  useEffect(() => {
+    // Fetch models from backend when selected year and company change
+    if (selectedYear && selectedCompany) {
+      shopContext.fetchModels(selectedYear, selectedCompany);
     }
-  };
-
-  const companies = selectedYear ? Object.keys(carData[selectedYear]) : [];
-  const models = selectedCompany ? carData[selectedYear][selectedCompany] : [];
+  }, [selectedYear, selectedCompany, shopContext]);
 
   return (
-    <div className="parent">
-    <div className='container'>
-    <h1>Select The vehicle</h1>
-      <div className="first">
-      <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
-        <option value=""className='first'>Select Year</option>
-        {Object.keys(carData).map(year => <option key={year} value={year}>{year}</option>)}
+    <div>
+      <select
+        value={selectedYear}
+        onChange={(e) => setSelectedYear(e.target.value)}
+      >
+        <option value="">Select Year</option>
+        {shopContext.years.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
       </select>
-      </div>
-      <div className="second">
-      <select value={selectedCompany} onChange={(e) => setSelectedCompany(e.target.value)}>
-        <option value="" className='second'>Select Company</option>
-        {companies.map(company => <option key={company} value={company}>{company}</option>)}
+      <select
+        value={selectedCompany}
+        onChange={(e) => setSelectedCompany(e.target.value)}
+      >
+        <option value="">Select Company</option>
+        {shopContext.companies.map((company) => (
+          <option key={company} value={company}>
+            {company}
+          </option>
+        ))}
       </select>
-      </div>
-      <div className="third">
-        <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
-          <option value="" className='third'>Select Model</option>
-          {models.map(model => <option key={model} value={model}>{model}</option>)}
-        </select>
-      </div>
-    </div>
+      <select
+        value={selectedModel}
+        onChange={(e) => setSelectedModel(e.target.value)}
+      >
+        <option value="">Select Model</option>
+        {shopContext.models.map((model) => (
+          <option key={model} value={model}>
+            {model}
+          </option>
+        ))}
+      </select>
+      <Link
+        to={`/CarDisplay?year=${selectedYear}&company=${selectedCompany}&model=${selectedModel}`}
+      >
+        <button>Go</button>
+      </Link>
     </div>
   );
 }
 
-export default App;
+export default Flexbox;

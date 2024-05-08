@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   padding: 1vh;
+  background-color: rgb(48, 33, 33);
   box-shadow: 0 1px 3px -2px rgb(211, 8, 8);
 }
 
@@ -10,13 +11,14 @@
 }
 
 .navlogo p {
-  color: black;
+  color: rgb(248, 243, 243);
   font-size: 2vh;
   font-weight: 600;
 }
 
 .navitems {
   display: flex;
+  color: white;
   align-items: center;
   list-style: none;
   gap: 40px;
@@ -27,6 +29,7 @@
 
 .navitems li {
   display: flex;
+  color: white;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -34,12 +37,13 @@
   cursor: pointer;
 }
 
+
 .navitems hr {
   border: none;
   width: 80%;
   height: 1px;
   border-radius: 10px;
-  background: #ff4141;
+  background: #ffffff;
 }
 
 .loginCart {
@@ -50,16 +54,18 @@
 
 .loginCart button {
   width: 127px;
+  margin-top: 5px;
   height: 58px;
   outline: none;
-  border: 1px solid #5a27dc;
+  border: 1px solid #eae5f5;
   font-size: 20px;
   font-weight: 500;
-  background-color: rgb(176, 205, 230);
+  background-color: rgb(185, 194, 198);
   cursor: pointer;
   border-radius: 50px;
+  color: white; /* Change button text color to white */
+  transition: all 0.3s ease; /* Add transition for smooth effect */
 }
-
 .loginCart button:active {
   color: #650f0f;
 }

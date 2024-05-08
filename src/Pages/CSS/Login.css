@@ -1,67 +1,68 @@
-.login{
-    width:100%;
-    height:80vh;
-    background-color: #fce3fe;
-    padding-top: 100px;
+.login {
+  width: 100%;
+  height: 80vh;
+  background-color: #fce3fe;
+  padding-top: 100px;
 }
 
-.login-container{
-    width:580px;
-    height: 600px;
-    background-color: white;
-    margin: auto;
-    padding:40px 60px;
+.login-container {
+  width: 580px;
+  height: 600px;
+  background-color: white;
+  margin: auto;
+  padding: 40px 60px;
 }
 
-.login-container h1{
-    margin: 20px 0px;
+.login-container h1 {
+  margin: 20px 0px;
 }
 
-.login-fields{
-    display: flex;
-    flex-direction: column;
-    gap:30px;
-    margin:30px;
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px;
 }
 
-.login-fields input{
-    height: 52px;
-    width: 100%;
-    padding-left: 20px;
-    border:1px solid #c9c9c9;
-    outline: none;
-    color: #5c5c5c;
-    font-size: 18px;
+.login-fields input {
+  height: 52px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
 }
-.login-container button{
-    width:100%;
-    height:52px;
-    color: white;
-    background-color: #ff4141;
-    margin-top:30px;
-    border:none;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.login-login{
-    margin-top:20px;
-    color: #5c5c5c;
-    font-size:18px;
-    font-weight: 500;
-}
-.login-login span{
-    color:#ff4141;
-    font-weight: 600;
+.login-container button {
+  width: 100%;
+  height: 52px;
+  color: white;
+  background-color: #ff4141;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.login agree{
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
-    gap:20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
+.login-login {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-login span {
+  color: #ff4141;
+  font-weight: 600;
+}
+
+.login agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
 }

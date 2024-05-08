@@ -5,24 +5,27 @@
   margin: auto;
   padding: 0px 140px;
   margin-bottom: 150px;
-  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  background-image: url("C:\Users\lohan\OneDrive\Desktop\Programming\E-commerce\src\modules\assets\materials\offer_img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 600px;
 }
-
-.offer-left {
-  flex: 1;
+.offers.offer-left {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
 }
 
 .offer-left h1 {
-  color: #171717;
+  color: #f3efef;
   font-size: 80px;
   font-weight: 600;
 }
 
 .offer-left p {
-  color: #171717;
+  color: #f0ebeb;
   font-size: 22px;
   font-weight: 600;
 }
@@ -31,7 +34,7 @@
   width: 282px;
   height: 70px;
   border-radius: 35px;
-  background: #ff4141;
+  background: #b4aeb4;
   border: none;
   color: white;
   font-size: 22px;
@@ -45,6 +48,6 @@
   align-items: center;
   justify-content: flex-end;
   padding-top: 50px;
-  width:100%;
+  width: 100%;
   height: auto;
 }
