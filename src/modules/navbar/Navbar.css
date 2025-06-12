@@ -63,9 +63,10 @@
   background-color: rgb(185, 194, 198);
   cursor: pointer;
   border-radius: 50px;
-  color: white; /* Change button text color to white */
-  transition: all 0.3s ease; /* Add transition for smooth effect */
+  color: white; 
+  transition: all 0.3s ease; 
 }
+
 .loginCart button:active {
   color: #650f0f;
 }
