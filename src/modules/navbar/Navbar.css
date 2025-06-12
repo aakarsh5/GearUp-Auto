@@ -37,7 +37,6 @@
   cursor: pointer;
 }
 
-
 .navitems hr {
   border: none;
   width: 80%;
@@ -47,13 +46,14 @@
 }
 
 .loginCart {
+  color: #650f0f;
   display: flex;
   align-items: center;
   gap: 45px;
 }
 
 .loginCart button {
-  width: 127px;
+  width: 120px;
   margin-top: 5px;
   height: 58px;
   outline: none;
@@ -83,3 +83,85 @@
   background-color: red;
   color: white;
 }
+
+.nav-drop {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 12px 50px;
+  }
+  .navlogo {
+    width: 480px;
+  }
+  .navitems {
+    gap: 30px;
+    font-size: 16px;
+  }
+  .loginCart {
+    gap: 30px;
+  }
+  .loginCart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .cartcount {
+    margin-left: -40px;
+    font-size: 12px;
+  }
+}
+/* 
+@media (max-width: 1024) {
+  .navbar {
+    padding: 12px 30px;
+  }
+  .navitems {
+    gap: 25px;
+    font-size: 14px;
+  }
+
+  .loginCart button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .logincart img {
+    width: 30px;
+  }
+  .cartcount {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 0px;
+  }
+  .nav-drop{
+    display: block;
+    width: 30px;
+    rotate:-90deg;
+    transition:0.5s;
+  }
+  .navitems{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    top:50px;
+  }
+  .navitems-visible{
+    display:flex ;
+  }
+  .nav-drop.open{
+    transition: rotate(90deg);
+  }
+    
+
+  
+} */

@@ -14,10 +14,15 @@
 
 .left {
   position: relative;
-  margin-top: 120px;
+  margin-top: 173px;
   margin-left: 700px;
   max-width: 30%;
   height: auto;
+}
+.left img {
+  width: 340px; 
+  height: 340px; 
+  object-fit: cover;
 }
 
 .right {

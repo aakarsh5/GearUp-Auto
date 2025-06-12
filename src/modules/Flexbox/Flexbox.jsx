@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../Context/ShopContext";
 import CarDisplay from "../CarDisplay/CarDisplay";
+// import "./Flexbox.css";
 
 function Flexbox() {
   const [selectedYear, setSelectedYear] = useState("");
@@ -13,14 +14,14 @@ function Flexbox() {
     // Fetch years from backend when component mounts
     console.log("first");
     shopContext.fetchCompanies(selectedYear);
-  }, [selectedYear, shopContext]);
+  }, [selectedYear]);
 
   useEffect(() => {
     // Fetch models from backend when selected year and company change
     if (selectedYear && selectedCompany) {
       shopContext.fetchModels(selectedYear, selectedCompany);
     }
-  }, [selectedYear, selectedCompany, shopContext]);
+  }, [selectedYear, selectedCompany]);
 
   return (
     <div>
@@ -51,12 +52,15 @@ function Flexbox() {
         onChange={(e) => setSelectedModel(e.target.value)}
       >
         <option value="">Select Model</option>
-        {shopContext.models.map((model) => (
-          <option key={model} value={model}>
-            {model}
-          </option>
-        ))}
+        {[...new Set(shopContext.models.map((model) => model.model))].map(
+          (model, index) => (
+            <option key={index} value={model}>
+              {model}
+            </option>
+          )
+        )}
       </select>
+
       <Link
         to={`/CarDisplay?year=${selectedYear}&company=${selectedCompany}&model=${selectedModel}`}
       >

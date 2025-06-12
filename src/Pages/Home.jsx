@@ -11,7 +11,7 @@ function Home() {
     <div>
       <Head />
       <Popular />
-      <Flexbox />
+      {/* <Flexbox /> */}
       <Collection />
       <Offer />
       <center>

@@ -8,9 +8,10 @@ import logo from "../assets/logo_footer.png";
 function Last() {
   return (
     <div className="footer">
+      <hr />
       <div className="footer-logo">
           <img src={logo} alt="footer" />
-          <p>GearUp Auto</p>
+          <p>GearUpAuto</p>
       </div>
 
       <ul className="footer-links">
@@ -27,11 +28,11 @@ function Last() {
           <img src={whatsapp} alt="whatsapp" />
         </div>
         <div className="footer-icon-container">
-          <img src={x} alt="x" />
+          <img  height="34px" src={x} alt="x" />
         </div>
       </div>
       <div className="footer-copyright">
-        <hr />
+        
         <p>Copyright @ 2024 - All Right Reserved</p>
       </div>
     </div>

@@ -1,7 +1,14 @@
+@font-face {
+  font-family: PP mori;
+  src: url(./ppmori.ttf);
+}
+
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: PP mori;
+  color: #160c0c;
 }
 
 html,

@@ -9,7 +9,7 @@ function Item(props) {
         <img src={props.image} alt="image" />
       </Link>
       {/* use backticks */}
-      <p>{props.name}</p>
+      <div className="name"><p>{props.name}</p></div>
       <div className="price">
         <div className="new">${props.new_price}</div>
         <div className="old">${props.old_price}</div>

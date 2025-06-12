@@ -4,7 +4,9 @@
   display: flex;
   margin: auto;
   padding: 0px 140px;
+  padding-top: 35px;
   margin-bottom: 150px;
+  margin-top: 30px;
   background-image: url("C:\Users\lohan\OneDrive\Desktop\Programming\E-commerce\src\modules\assets\materials\offer_img1.jpg");
   background-position: center;
   background-repeat: no-repeat;
