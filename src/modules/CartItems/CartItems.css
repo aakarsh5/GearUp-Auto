@@ -22,6 +22,11 @@
 .format {
   font-size: 18px;
   font-weight: 500;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 15px 0;
 }
 
 .product-icon {
@@ -38,13 +43,15 @@
   margin-top: 10px;
   width: 64px;
   height: 80px;
-  border: 2px solid #ebebeb; /* corrected typo here */
+  border: 2px solid #ebebeb;
   background-color: white;
   color: black;
 }
 
 .down {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 100px 0px;
 }
 
@@ -72,4 +79,72 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* ------------------- Responsive Design ------------------- */
+
+@media screen and (max-width: 1024px) {
+  .cartitems {
+    margin: 50px 40px;
+  }
+
+  .main-format,
+  .format {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .main-format p:nth-child(5),
+  .main-format p:nth-child(6),
+  .format p:nth-child(5),
+  .format img.remove-icon {
+    display: none;
+  }
+
+  .quantity {
+    width: 50px;
+    height: 50px;
+  }
+
+  .remove-icon {
+    margin: 0;
+  }
+
+  .total {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .total button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-format,
+  .format {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .product-icon {
+    height: 50px;
+  }
+
+  .quantity {
+    width: 40px;
+    height: 40px;
+  }
+
+  .total h1,
+  .total-items h3 {
+    font-size: 18px;
+  }
+
+  .total button {
+    font-size: 14px;
+    height: 50px;
+  }
 }
