@@ -1,17 +1,27 @@
 .item {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: transform 0.6s;
 }
+
 .item img {
-  width: 240px; /* adjust as needed */
-  height: 240px; /* adjust as needed */
-  object-fit: cover; /* this will ensure that your images cover the whole space without distortion */
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
 .name {
-  font-size: 25px;
+  font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .item p {
@@ -21,22 +31,66 @@
 .price {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .new {
   color: #374151;
-  font-size: 22px;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .old {
   color: #8c8c8c;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: line-through;
 }
 
 .item:hover {
   transform: scale(1.05);
-  transition: 0.6s;
+}
+
+/* 🔁 Responsive Styles */
+@media (max-width: 768px) {
+  .item {
+    max-width: 300px;
+  }
+
+  .item img {
+    max-width: 200px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .new,
+  .old {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    max-width: 90%;
+  }
+
+  .item img {
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    gap: 10px;
+  }
+
+  .new,
+  .old {
+    font-size: 0.95rem;
+  }
 }
