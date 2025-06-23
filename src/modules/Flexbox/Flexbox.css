@@ -1,9 +1,11 @@
 .parent {
   margin-top: 3px;
   display: flex;
-  justify-content: center; /* Center children horizontally */
-  align-items: center; /* Center children vertically */
-  /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .container {
@@ -11,9 +13,13 @@
   flex-direction: column;
   justify-content: space-around;
   width: 80%;
-  height: 150px;
+  max-width: 600px;
+  height: auto;
   background: linear-gradient(180deg, #fde1ff 20%, #e1ffea22 90%);
-  margin: auto; /* Center the container horizontally */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .first,
@@ -21,15 +27,9 @@
 .third {
   display: flex;
   flex-direction: column;
-  position: relative;
-  justify-self: center;
-  flex-wrap: wrap;
-  max-width: 300px;
-  height: 50px;
-  align-self: center;
+  max-width: 100%;
   width: 100%;
-  margin: auto;
-  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .container h1 {
@@ -37,14 +37,55 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 10px;
 }
+
 select {
   width: 100%;
   padding: 10px;
   border-radius: 15px;
   border: none;
   font-size: 16px;
-  box-sizing: border-box;
   background-color: rgb(193, 208, 213);
   color: rgb(3, 3, 3);
+  box-sizing: border-box;
+}
+
+/* Responsive Design: small screens */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .container h1 {
+    font-size: 18px;
+  }
+}
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
