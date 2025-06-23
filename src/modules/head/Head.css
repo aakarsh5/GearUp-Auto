@@ -2,35 +2,66 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 100%;
-  /* background-image: url('C:\Users\lohan\OneDrive\Desktop\Programming\E-commerce\src\modules\assets\front.jpeg'); */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .main video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1; /* Keep video behind content */
 }
 
 .left {
-  border-color: white;
   position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2vw;
   color: white;
-  width: 50%;
-  justify-content: center;
-  padding-top: 10%;
-  text-align: center;
-  height: 80%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
+
 .bottom {
   position: absolute;
-  color: white;
-  width: 100%;
-  padding: 20px;
   bottom: 7%;
+  width: 100%;
   text-align: center;
+  padding: 0 20px;
+  color: white;
+  font-size: 1.5vw;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left {
+    font-size: 5vw;
+    top: 15%;
+  }
+
+  .bottom {
+    font-size: 4vw;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    font-size: 6vw;
+  }
+
+  .bottom {
+    font-size: 5vw;
+  }
 }
