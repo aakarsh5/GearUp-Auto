@@ -321,10 +321,4 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(port, (error) => {
-  if (!error) {
-    console.log("Server Running on port" + port);
-  } else {
-    console.log("error :" + error);
-  }
-});
+module.exports = app;
