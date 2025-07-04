@@ -10,10 +10,9 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
+require("dotenv").config();
 // database connection with mongodb
-mongoose.connect(
-  "mongodb+srv://lohaniaakarsh:aakarshlohani@cluster0.vj4siu2.mongodb.net/e-commerce"
-);
+mongoose.connect(process.env.MONGO_DB);
 
 //api creation
 app.get("/", (req, res) => {
@@ -221,7 +220,9 @@ app.get("/years", async (req, res) => {
 app.get("/companies/:year", async (req, res) => {
   const { year } = req.params;
   try {
-    const companies = await Product.distinct("company", { year: parseInt(year) });
+    const companies = await Product.distinct("company", {
+      year: parseInt(year),
+    });
     res.json(companies);
   } catch (error) {
     console.error("Error fetching companies:", error);
