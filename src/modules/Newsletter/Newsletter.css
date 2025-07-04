@@ -1,69 +1,73 @@
 .newsletter {
   width: 90%;
   max-width: 800px;
-  height: auto;
-  min-height: 40vh;
+  margin: auto;
+  margin-bottom: 150px;
+  padding: 40px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 20px;
-  margin-bottom: 150px;
-  background-image: url("/assets/newsletter.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
   gap: 20px;
+  border-radius: 20px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .newsletter h1 {
   color: #f4ecec;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  margin: 0;
 }
 
 .newsletter p {
   color: #f4efef;
   font-size: 1.2rem;
+  margin: 0;
 }
 
 .newsletter .input {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  background: white;
   width: 100%;
   max-width: 500px;
-  height: 50px;
-  border-radius: 80px;
-  border: 1px solid #e3e3e3;
+  height: 55px;
+  border-radius: 999px;
   overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
 }
 
 .newsletter input {
   flex: 1;
+  height: 100%;
   padding: 0 20px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   border: none;
   outline: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .newsletter button {
-  width: 140px;
   height: 100%;
-  border: none;
-  border-radius: 80px;
-  background: rgb(193, 198, 198);
-  color: white;
+  padding: 0 25px;
   font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(193, 198, 198);
+  color: white;
+  border: none;
   cursor: pointer;
+  white-space: nowrap;
+  border-radius: 0 999px 999px 0;
+  box-sizing: border-box;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   .newsletter h1 {
     font-size: 1.8rem;
@@ -76,17 +80,20 @@
   .newsletter .input {
     flex-direction: column;
     height: auto;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 16px;
+    padding: 15px 10px;
   }
 
   .newsletter input {
     width: 100%;
+    height: 45px;
     margin-bottom: 10px;
+    border-radius: 10px;
   }
 
   .newsletter button {
     width: 100%;
-    height: 40px;
+    height: 45px;
+    border-radius: 10px;
   }
 }
