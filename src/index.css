@@ -7,18 +7,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: PP mori;
-  color: #160c0c;
 }
 
-html,
 body {
+  font-family: PP mori, "Playfair Display", serif;
+  color: #160c0c;
   width: 100%;
   height: 100%;
-  font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: normal;
   font-style: normal;
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 .main {
